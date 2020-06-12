@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  td, th {
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+  }
+  td {
+    text-align: center;
+    // transition: all .2s;
+    &.disabled {
+      opacity: 0.5;
+    }
+    &:hover {
+      // background: #eee;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    background: var(--primary-color);
+    font-weight: bold;
+    color: #ffffff;
+    border-color: var(--primary-color);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 2px solid #000;
+    }
+    &:hover {
+      border-color: #66AEE7;
+    }
+  }
+
+  .selected {
+    border-color: var(--primary-color);
+  }
+}
