@@ -16,8 +16,20 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background: #272727;
-  color: #ffffff;
+  &.light {
+    color: #333333;
+    background: #ffffff;
+    input {
+      border: 1px solid #ccc;
+    }
+  }
+  &.dark {
+    color: #ffffff;
+    background: #272727;
+    input {
+      border: none;
+    }
+  }
 }
 
 a {
@@ -35,9 +47,8 @@ ul {
 input {
   display: block;
   width: 100%;
-  padding: 0rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
-  bottom: 1px solid #cccccc;
   outline: none;
   margin-bottom: 0.5rem;
 }
@@ -57,7 +68,6 @@ input {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  margin-left: 0.5rem;
   transition: opacity .3s;
   outline: none;
 

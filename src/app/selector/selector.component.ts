@@ -14,4 +14,10 @@ export class SelectorComponent {
     this.dateService.changeMonth(dir)
   }
 
+  changeTheme() {
+    const body = document.querySelector('body')
+    body.classList.toggle('dark');
+    body.classList.toggle('light');
+  }
+
 }
